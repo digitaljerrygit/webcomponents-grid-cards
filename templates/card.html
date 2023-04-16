@@ -1,0 +1,39 @@
+<template id="card">
+    <style> 
+        .card {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            color: #1e293b;
+            font-family: sans-serif;
+            padding: 16px;
+            border: 1px solid #cbd5e1;
+            border-radius: 4px;
+            box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+        }
+
+        ::slotted(img) {
+            width: 100%;
+            aspect-ratio: 16/9;
+        }
+
+        ::slotted(h4) {
+            margin: 0;
+        }
+        ::slotted(p) {
+            margin: 0;
+        }
+    </style>
+
+    <div class="card">
+        <slot name="display-picture">
+            <img src="#" alt="image">
+        </slot>
+        <slot name="title">
+            <h4>Default Title</h4>
+        </slot>
+        <slot name="description">
+            <p>(Default)Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis nesciunt in quod iste eaque harum quaerat a odio deleniti repudiandae placeat porro necessitatibus explicabo deserunt ipsam, vitae beatae quo reiciendis.</p>
+        </slot>
+    </div>
+</template>
